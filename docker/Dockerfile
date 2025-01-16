@@ -109,5 +109,6 @@ RUN ln -s /app/node_modules/prisma/build/index.js ./node_modules/.bin/prisma
 
 # Get the start script from docker/start.sh
 COPY --chown=nextjs:nodejs ./docker/start.sh ./start.sh
+RUN apk add --no-cache openssl
 
 CMD ["sh", "start.sh"]
